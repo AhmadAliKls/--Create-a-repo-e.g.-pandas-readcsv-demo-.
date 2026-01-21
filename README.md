@@ -32,6 +32,9 @@ print(df)
 print(df.loc[["00045", "00047"]])          # Multiple rows
 print(df.loc["00049", "Price"])            # Single value
 print(df.loc["00045":"00048"])             # Slice by index
+
+##Code Output
+
          Quantity        Price CustomerName
 OrderID                                     
 00045          10   199.990005     Ali Khan
