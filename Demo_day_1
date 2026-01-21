@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+
+# Load CSV with dtype and index_col
+df = pd.read_csv("data.csv", sep=",", index_col="OrderID", dtype={
+    "OrderID": str,
+    "Quantity": np.int8,
+    "Price": np.float32,
+    "CustomerName": str
+})
+
+print(df)
+
+# Query examples
+print(df.loc[["00045", "00047"]])          # Multiple rows
+print(df.loc["00049", "Price"])            # Single value
+print(df.loc["00045":"00048"])             # Slice by index
